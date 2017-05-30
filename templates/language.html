@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block main %}
+<section>
+  <h2>Choose your language</h2>
+    <p><form method=get action={{ url_for('survey',
+                                            language="en", token=token) }}>
+      <button>English</button></form>
+    </p>
+    <p><form method=get action={{ url_for('survey',
+                                            language="fr", token=token) }}>
+      <button>Français</button></form>
+    </p>
+</section>
+{% endblock %}
